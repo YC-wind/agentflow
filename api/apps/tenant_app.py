@@ -23,7 +23,7 @@ from common.constants import RetCode, StatusEnum
 from common.misc_utils import get_uuid
 from common.time_utils import delta_seconds
 from api.utils.api_utils import get_data_error_result, get_json_result, get_request_json, server_error_response, validate_request
-# from api.utils.web_utils import send_invite_email
+from api.utils.web_utils import send_invite_email
 from common import settings
 from api.apps import login_required, current_user
 

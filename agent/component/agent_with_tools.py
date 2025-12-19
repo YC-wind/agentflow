@@ -369,7 +369,8 @@ class Agent(LLM, ToolBase):
                 self.callback("reflection", {}, str(reflection), elapsed_time=timer()-st)
 
             except Exception as e:
-                logging.exception(msg=f"Wrong JSON argument format in LLM ReAct response: {e}")
+                logging.exception(f"Wrong JSON argument format in LLM ReAct response: {e}")
+                # logging.exception(msg=f"Wrong JSON argument format in LLM ReAct response: {e}")
                 e = f"\nTool call error, please correct the input parameter of response format and call it again.\n *** Exception ***\n{e}"
                 append_user_content(hist, str(e))
 

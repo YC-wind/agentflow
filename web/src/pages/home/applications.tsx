@@ -13,19 +13,19 @@ import { ChatList } from './chat-list';
 import { SearchList } from './search-list';
 
 const IconMap = {
-  [Routes.Chats]: 'chats',
-  [Routes.Searches]: 'searches',
+  //   [Routes.Chats]: 'chats',
+  //   [Routes.Searches]: 'searches',
   [Routes.Agents]: 'agents',
 };
 
 const EmptyTypeMap = {
-  [Routes.Chats]: EmptyCardType.Chat,
-  [Routes.Searches]: EmptyCardType.Search,
+  //   [Routes.Chats]: EmptyCardType.Chat,
+  //   [Routes.Searches]: EmptyCardType.Search,
   [Routes.Agents]: EmptyCardType.Agent,
 };
 
 export function Applications() {
-  const [val, setVal] = useState(Routes.Chats);
+  const [val, setVal] = useState(Routes.Agents);
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [listLength, setListLength] = useState(0);
@@ -44,8 +44,8 @@ export function Applications() {
 
   const options = useMemo(
     () => [
-      { value: Routes.Chats, label: t('chat.chatApps') },
-      { value: Routes.Searches, label: t('search.searchApps') },
+      //       { value: Routes.Chats, label: t('chat.chatApps') },
+      //       { value: Routes.Searches, label: t('search.searchApps') },
       { value: Routes.Agents, label: t('header.flow') },
     ],
     [t],
